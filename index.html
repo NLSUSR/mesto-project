@@ -5,33 +5,108 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./media.css">
     <title>Mesto</title>
 </head>
 
 <body class="page">
+
     <header class="header">
-        <!--лого--><img class="header__logo" src="./images/vector.svg" alt="">
+        <a class="header__logo-link link-hover" href="#"><img class="header__logo" src="./images/main-pics/logo.svg"
+                alt=""></a>
     </header>
+
     <main class="content">
+
         <section class="profile">
-            <!--аватар--><img class="profile__avatar" src="./images/avatar.svg" alt="">
-            <div class="profile__profile-info">
-                <!--имя-->
-                <p class="profile__profile-info-name">Жак-Ив Кусто</p>
-                <!--деятельность-->
-                <p class="profile__profile-info-activity">Исследователь океана</p>
-                <!--кнопка редактирования профиля--><button class="profile__profile-info-edit-button"></button>
+            <img class="profile__avatar" src="./images/avatars/avatar.svg" alt="">
+            <div class="profile__info">
+                <div class="profile__title-button-wrapper">
+                    <h1 class="profile__title">Жак-Ив Кусто </h1>
+                    <button type="button" class="profile__edit-button link-hover"></button>
+                </div>
+                <p class="profile__subtitle">Исследователь океана </p>
             </div>
-            <!--кнопка добавления профиля--><button class="profile__add-button"></button>
+
+            <button type="button" class="profile__add-button link-hover"></button>
         </section>
+
         <section class="elements">
+            <ul class="elements__list">
 
+                <li class="elements__item">
+                    <div class="element">
+                        <img class="element__mask-group" src="./images/places/karachaevsk.png" alt="">
+                        <div class="element__description">
+                            <h2 class="element__place-name">Карачаевск</h2>
+                            <button type="button" class="element__like link-hover element__like_active"></button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="elements__item">
+                    <div class="element">
+                        <img class="element__mask-group" src="./images/places/elbrus.png" alt="">
+                        <div class="element__description">
+                            <h2 class="element__place-name">Гора Эльбрус </h2>
+                            <button type="button" class="element__like link-hover"></button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="elements__item">
+                    <div class="element">
+                        <img class="element__mask-group" src="./images/places/dombai.png" alt="">
+                        <div class="element__description">
+                            <h2 class="element__place-name">Домбай</h2>
+                            <button type="button" class="element__like link-hover"></button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="elements__item">
+                    <div class="element">
+                        <img class="element__mask-group" src="./images/places/elbrus.png" alt="">
+                        <div class="element__description">
+                            <h2 class="element__place-name">Гора Эльбрус</h2>
+                            <button type="button" class="element__like link-hover"></button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="elements__item">
+                    <div class="element">
+                        <img class="element__mask-group" src="./images/places/dombai.png" alt="">
+                        <div class="element__description">
+                            <h2 class="element__place-name">Домбай</h2>
+                            <button type="button" class="element__like link-hover"></button>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="elements__item">
+                    <div class="element">
+                        <img class="element__mask-group" src="./images/places/karachaevsk.png" alt="">
+                        <div class="element__description">
+                            <h2 class="element__place-name">Карачаево-Ч...</h2>
+                            <button type="button" class="element__like link-hover"></button>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
         </section>
-    </main>
-    <footer class="footer">
 
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <p class="footer__copyright">&copy;2022 Mesto Russia<a class="footer__copyright-link"
+                    href="https://vk.com/nlsusr/" target="_blank">Сергеев Илья</a></p>
+        </div>
     </footer>
+
 </body>
 
 </html>

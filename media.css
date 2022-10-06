@@ -1,0 +1,184 @@
+@media screen and (max-width: 1279px) {
+  .page {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1024px;
+  }
+}
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+@media screen and (max-width: 1023px) {
+  .page {
+    margin: 0 auto;
+    max-width: 768px;
+  }
+.header{
+  margin: 45px 19px 41px;
+  padding: 0;
+}
+.profile{
+  margin: 0 19px 51px;
+  padding: 0;
+}
+  .profile__title {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .profile__title{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+text-align: center;
+
+color: #FFFFFF;
+  }
+  .elements__list {
+    margin: 0;
+    padding: 0;
+    max-height: fit-content;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 282px);
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-template-areas:
+      "el el"
+      "el el"
+      "el el";
+  }
+}
+.footer {
+  margin: 0;
+  padding: 0;
+  max-width: 768px;
+}
+/* XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+@media screen and (max-width: 767px) {
+  .page {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 320px;
+  }
+  .header {
+    margin: 28px auto 42px;
+    padding: 0;
+  }
+  .header__logo {
+    margin: 0 0 31.6px 27px;
+    padding: 0;
+    width: 103.74px;
+  }
+  .profile {
+    margin: 0 auto;
+    padding: 0;
+    width: 282px;
+    justify-content: center;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "img"
+      "p-i"
+      "b-a";
+    gap: 0;
+  }
+  .profile__avatar {
+    margin: 0 auto 26px;
+    padding: 0;
+    justify-self: center;
+  }
+
+  .profile__info {
+    margin: 0;
+    padding: 0;
+    justify-self: center;
+  }
+  .profile__title-button-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 282px;
+  }
+  .profile__title {
+    margin: 0 0 0 46px;
+    padding: 0;
+    text-align: end;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 33px;
+    text-align: center;
+
+    color: #ffffff;
+    box-sizing: border-box;
+  }
+  .profile__subtitle {
+    margin: 0 auto 36px;
+    padding: 0;
+    text-align: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+
+    color: #ffffff;
+  }
+  .profile__edit-button {
+    margin: 0 0 0 10px;
+    padding: 0;
+    width: 18px;
+    height: 18px;
+    background-size: 7.5px 7.5px;
+  }
+  .profile__add-button {
+    margin: 0 auto 36px;
+    padding: 0;
+    width: 282px;
+  }
+  .elements {
+    margin: 0 auto 48px;
+    padding: 0;
+    justify-content: center;
+  }
+  .elements__list {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 282px;
+    max-height: fit-content;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "el"
+      "el"
+      "el"
+      "el"
+      "el"
+      "el";
+  }
+  .footer {
+    margin: 0 auto;
+    padding: 0;
+    width: 282px;
+  }
+  .footer__copyright {
+    margin: 0 0 36px;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer__copyright-link {
+    margin: 0 0 0 16px;
+    padding: 0;
+  }
+}
