@@ -146,7 +146,7 @@
   grid-template-areas:
     "el el el"
     "el el el";
-  gap: 10px 20px;
+  gap: 17px 20px;
 }
 
 .elements__item {
