@@ -21,8 +21,8 @@
 
 ##### Функции:
 
-* Для отображения popup нужно раскоментировать модификатор 
-popup_opened
+* Для отображения popup нужно убрать "#" 
+перед  модификаторoм popup_opened
 
 # Ссылка на проект в github pages: 
 https://nlsusr.github.io/mesto-project/ 
