@@ -22,9 +22,7 @@
 ##### Функции:
 
 * Для отображения popup нужно раскоментировать модификатор 
-popup_open.css в блоке 
-по относительному адресу: 
-./blocks/popup/_open/popup_open.css   
+popup_opened
 
 # Ссылка на проект в github pages: 
-https://nlsusr.github.io/mesto/ 
+https://nlsusr.github.io/mesto-project/ 

@@ -134,13 +134,13 @@
     padding: 0;
   }
 
-  .popup__form {
+  .popup__container {
     margin: 0;
     padding: 0;
     width: 282px;
     
   }
-  .popup__form-exit{
+  .popup__container-exit{
     margin: 0;
     padding: 0;
     background-size: 20px 20px;
@@ -149,7 +149,7 @@
     top: -32px;
     right: 0px;
   }
-  .popup__form-title{
+  .popup__container-title{
     margin: 25px auto 75px;
     padding: 0;
 width: 238px;
@@ -177,7 +177,7 @@ line-height: 1.0625rem;
 
 color: #000000;
   }
-  .popup__form-save{
+  .popup__container-save{
     margin: 0 auto 25px;
     padding: 0;
     max-width: 238px;
