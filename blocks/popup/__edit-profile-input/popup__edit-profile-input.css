@@ -4,10 +4,12 @@
   width: 358px;
   border-bottom: 1px solid rgba(0, 0, 0, 50%);
   font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 0.875rem;
-line-height: 1.0625rem;
-
-color: #000000;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  color: #000000;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
