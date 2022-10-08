@@ -1,0 +1,13 @@
+.popup__edit-profile-input {
+  margin: 0 auto 30px;
+  border: 0;
+  width: 358px;
+  border-bottom: 1px solid rgba(0, 0, 0, 50%);
+  font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 0.875rem;
+line-height: 1.0625rem;
+
+color: #000000;
+}

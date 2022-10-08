@@ -1,0 +1,5 @@
+.element__place-name {
+  margin: 25px 0 0 21px;
+  padding: 0;
+  grid-area: pls;
+}

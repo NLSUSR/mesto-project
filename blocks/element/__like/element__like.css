@@ -1,0 +1,15 @@
+.element__like {
+  margin: 0;
+  padding: 0;
+  margin: 30px 30px 0 0;
+  width: 22px;
+  height: 19px;
+  background-image: url(../../../images/main-pics/like.svg);
+  background-repeat: no-repeat;
+  background-size: 22px 19px;
+  background-color: #fff;
+  border: none;
+  justify-self: end;
+  grid-area: like;
+  cursor: pointer;
+}

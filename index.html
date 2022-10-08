@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./media/media.css">
+    <link rel="stylesheet" href="./pages/index.css">
     <title>Mesto</title>
 </head>
 
@@ -24,7 +23,8 @@
             <div class="profile__info">
                 <div class="profile__title-button-wrapper">
                     <h1 class="profile__title">Жак-Ив Кусто </h1>
-                    <button type="button" class="profile__edit-button link-hover"></button>
+                    <button type="button" class="profile__edit-button link-hover" id="openPopupButton"
+                        aria-label="Редактировать"></button>
                 </div>
                 <p class="profile__subtitle">Исследователь океана </p>
             </div>
@@ -40,7 +40,7 @@
                         <img class="element__mask-group" src="./images/places/karachaevsk.png" alt="">
                         <div class="element__description">
                             <h2 class="element__place-name">Карачаевск</h2>
-                            <button type="button" class="element__like link-hover element__like_active"></button>
+                            <button type="button" class="element__like element__like_active link-hover"></button>
                         </div>
                     </div>
                 </li>
@@ -106,6 +106,19 @@
                     href="https://vk.com/nlsusr/" target="_blank">Сергеев Илья</a></p>
         </div>
     </footer>
+
+    <section class="popup popup_open">
+        <div class="popup__form">
+            <button class="popup__form-exit link-hover"></button>
+            <h2 class="popup__form-title">Редактировать профиль</h2>
+            <fieldset class="popup__edit-profile">
+                <input type="text" class="popup__edit-profile-input" placeholder="Жак-Ив Кусто" value="Жак-Ив Кусто">
+                <input type="text" class="popup__edit-profile-input" placeholder="Исследователь океана"
+                    value="Исследователь океана">
+            </fieldset>
+            <button class="popup__form-save">Сохранить</button>
+        </div>
+    </section>
 
 </body>
 
