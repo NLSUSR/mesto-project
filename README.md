@@ -25,3 +25,6 @@
 popup_open.css в блоке 
 по относительному адресу: 
 ./blocks/popup/_open/popup_open.css   
+
+# Ссылка на проект в github pages: 
+https://nlsusr.github.io/mesto/ 
