@@ -20,8 +20,6 @@
 @media screen and (max-width: 767px) {
   .profile__title {
     margin: 0 0 6px 46px;
-    font-size: 1.6875rem;
-    line-height: 2.0625rem;
     text-align: end;
   }
 }

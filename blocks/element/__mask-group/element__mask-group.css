@@ -2,9 +2,10 @@
   display: block;
   margin: 0;
   padding: 0;
-  min-width: 282px;
-  min-height: 282px;
-  width: 100%;
+  max-width: 282px;
+  max-height: 282px;
   border-radius: 10px 10px 0 0;
   object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1;
 }

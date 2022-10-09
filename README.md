@@ -21,12 +21,7 @@
 
 ##### Функции:
 
-* Для отображения popup нужно заменить: 
-
-* "display: none;" 
-на 
-* "display: flex;"
-
+* Для закрытия popup нужно в devtools убрать "галочку": c display:flex; 
 в модификаторе blocks/popup/_opened/popup_opened.css
 
 # Ссылка на проект в github pages: 
