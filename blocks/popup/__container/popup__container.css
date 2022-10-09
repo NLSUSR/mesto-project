@@ -4,8 +4,15 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  max-width: 430px;
-  max-height: max-content;
+  width: 430px;
+  height: 330px;
   background-color: white;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__container {
+    width: 282px;
+    height: 322px;
+  }
 }

@@ -21,8 +21,13 @@
 
 ##### Функции:
 
-* Для отображения popup нужно убрать "#" 
-перед  модификаторoм popup_opened
+* Для отображения popup нужно заменить: 
+
+* "display: none;" 
+на 
+* "display: flex;"
+
+в модификаторе blocks/popup/_opened/popup_opened.css
 
 # Ссылка на проект в github pages: 
 https://nlsusr.github.io/mesto-project/ 

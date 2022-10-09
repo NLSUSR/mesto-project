@@ -7,3 +7,25 @@
   grid-template-areas: "img p-i b-a";
   gap: 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .profile {
+    max-width: 581px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile {
+    margin: 0 auto;
+    padding: 0;
+    width: 282px;
+    justify-content: center;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "img"
+      "p-i"
+      "b-a";
+    gap: 0;
+  }
+}

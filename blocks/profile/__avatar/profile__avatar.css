@@ -2,7 +2,18 @@
   margin: 0;
   padding: 0;
   justify-content: start;
-  width: 120px;
+  max-width: 120px;
+  max-height: 120px;
+  object-position: top; /*center*/
+  object-fit: cover;
+  aspect-ratio: 1;
   border-radius: 50%;
   grid-area: img;
+}
+
+@media screen and (max-width: 767px) {
+  .profile__avatar {
+    margin: 0 auto 26px;
+    justify-self: center;
+  }
 }

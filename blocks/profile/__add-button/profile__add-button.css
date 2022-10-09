@@ -15,3 +15,11 @@
   grid-area: b-a;
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .profile__add-button {
+    margin: 0 auto 36px;
+    width: 282px;
+    background-size: 16px 16px;
+  }
+}

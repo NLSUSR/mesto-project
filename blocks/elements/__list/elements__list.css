@@ -4,11 +4,40 @@
   list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(auto-fit, 1fr);
   grid-template-areas:
     "el el el"
     "el el el";
   gap: 20px 17px;
   max-width: 880px;
   max-height: fit-content;
+}
+
+@media screen and (max-width: 1024px) {
+  .elements__list {
+    max-height: fit-content;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 282px);
+    grid-template-rows: repeat(3, minmax(min-content, max-content));
+    grid-template-areas:
+      "el el"
+      "el el"
+      "el el";
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .elements__list {
+    max-width: 282px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas:
+      "el"
+      "el"
+      "el"
+      "el"
+      "el"
+      "el";
+    gap: 20px;
+  }
 }
