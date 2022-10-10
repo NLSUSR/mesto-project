@@ -915,15 +915,17 @@
                 Илья</a></p>
     </footer>
 
-    <section class="popup popup_opened">
+     <section class="popup"> <!--оставляю комментарий чтобы незабыть вернуть модификатор popup_opened открывающий модальное окно-->
         <div class="popup__container">
             <button type="button" class="popup__container-exit link-hover"></button>
             <h2 class="popup__container-title">Редактировать профиль</h2>
-            <fieldset name="fieldset-edit-profile" class="popup__edit-profile">
-                <input type="text" class="popup__edit-profile-input" placeholder="Жак-Ив Кусто">
-                <input type="text" class="popup__edit-profile-input" placeholder="Исследователь океана">
-            </fieldset>
-            <button class="popup__container-save">Сохранить</button>
+            <form action="#" name="editform" class="popup__edit-profile-form">
+                <fieldset class="popup__edit-profile">
+                    <input type="text" name="profilename" class="popup__edit-profile-input" placeholder="Жак-Ив Кусто">
+                    <input type="text" name="profileactivity" class="popup__edit-profile-input" placeholder="Исследователь океана">
+                </fieldset>
+            </form>
+            <button type="button" class="popup__container-save">Сохранить</button>
         </div>
     </section>
 

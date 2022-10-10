@@ -21,8 +21,7 @@
 
 ##### Функции:
 
-* Для закрытия popup нужно в devtools убрать "галочку": c display:flex; 
-в модификаторе blocks/popup/_opened/popup_opened.css
+* Для появления модального окна ввода имени и рода занятий нужно зафлексить popup , по умолчанию popup - display: none;
 
 # Ссылка на проект в github pages: 
 https://nlsusr.github.io/mesto-project/ 

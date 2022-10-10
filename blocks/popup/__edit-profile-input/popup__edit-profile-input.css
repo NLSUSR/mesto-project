@@ -1,4 +1,4 @@
-.popup__edit-profile-input {/* (✿◠‿◠) */
+.popup__edit-profile-input {/* (╯°益°)╯彡┻━┻ */
   margin: 0 auto 30px;
   padding-bottom: 8px;
   border: 0;
@@ -24,8 +24,5 @@
 @media screen and (max-width: 767px) {
   .popup__edit-profile-input {
     width: 238px;
-    font-size: 0.875rem;
-    line-height: 1.0625rem;
-    color: #000;
   }
 }
