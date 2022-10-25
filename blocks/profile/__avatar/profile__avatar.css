@@ -9,6 +9,7 @@
   aspect-ratio: 1;
   border-radius: 50%;
   grid-area: img;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 767px) {
