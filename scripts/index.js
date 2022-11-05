@@ -1,3 +1,4 @@
+//--------------------------------------------------------------------------
 // карточки из коробочки
 const initialCards = [
     {
@@ -31,7 +32,7 @@ const initialCards = [
 
 const editProfileButton = document.querySelector('#editProfileButton');
 const profileInfo = document.querySelector('#profileInfo');
-const AddCardButton = document.querySelector('#addCardButton');
+const addCardButton = document.querySelector('#addCardButton'); // опечатался
 const profileName = document.querySelector('#profileName');
 const profileActivity = document.querySelector('#profileActivity');
 const profileAvatar = document.querySelector('#profileAvatar');
@@ -68,6 +69,17 @@ const elementsList = document.querySelector('#elementsList');
 const cardTemplate = document.querySelector('#cardTemplate').content;
 
 //--------------------------------------------------------------------------
+// переменные форм
+
+const editProfileSectionForm = document.forms['editProfileSectionForm'];
+const addCardSectionForm = document.forms['addCardSectionForm'];
+
+//--------------------------------------------------------------------------
+// кнопки закрытия
+
+const closeButtons = document.querySelectorAll('.popup__container-close');
+
+//--------------------------------------------------------------------------
 //функция открытия попапа
 
 function openPopup(popup) {
@@ -98,8 +110,9 @@ function saveEditProfile(event) {
     profileActivity.textContent = editProfileActivityInput.value;
     profileAvatar.setAttribute('src', editProfileAvatarInput.value);
     closePopup(editProfileSection);
+    event.target.reset()
 };
-saveEditProfileButton.addEventListener('click', saveEditProfile);
+editProfileSectionForm.addEventListener('submit', saveEditProfile);
 
 //--------------------------------------------------------------------------
 // функция сохранения добавления карточки
@@ -108,8 +121,9 @@ function saveAddCard(event) {
     event.preventDefault();
     createCards(addCardTitleInput.value, addCardImageLinkInput.value);
     closePopup(addCardSection);
+    event.target.reset()
 };
-saveAddCardButton.addEventListener('click', saveAddCard);
+addCardSectionForm.addEventListener('submit', saveAddCard);
 
 //--------------------------------------------------------------------------
 // функция создания карточки
@@ -119,7 +133,7 @@ function createCard(text, link) {
     const image = card.querySelector('.element__mask-group');
     const title = card.querySelector('.element__place-name');
     const like = card.querySelector('.element__like');
-    const forget = card.querySelector('.element__delete');
+    const trash = card.querySelector('.element__delete');
 
     title.textContent = text;
     image.setAttribute('src', link);
@@ -136,7 +150,7 @@ function createCard(text, link) {
         event.target.classList.toggle('element__like_active');
     });
 
-    forget.addEventListener('click', function (event) {
+    trash.addEventListener('click', function (event) {
         const card = event.target.closest('.elements__item');
         card.remove();
     });
@@ -174,31 +188,17 @@ editProfileButton.addEventListener('click', function () {
 });
 
 //--------------------------------------------------------------------------
-// слушатель кнопки закрытия редактирования профиля
-
-closeEditProfileButton.addEventListener('click', function () {
-    closePopup(editProfileSection);
-});
-
-//--------------------------------------------------------------------------
 // слушатель кнопки добавления карточки
 
-AddCardButton.addEventListener('click', function () {
+addCardButton.addEventListener('click', function () {
     openPopup(addCardSection);
 });
 
 //--------------------------------------------------------------------------
-// слушатель кнопки закрытия добавления карточки
-
-closeAddCardButton.addEventListener('click', function () {
-    closePopup(addCardSection);
-});
-
-//--------------------------------------------------------------------------
-// слушатель кнопки закрытия просматриваемой картинки
-
-closeOpenedImage.addEventListener('click', function () {
-    closePopup(openImageSection);
+// учтеная рекомендация по добавлению универсального обработчика крестиков закрытия попапов
+closeButtons.forEach((close) => {
+  const popup = close.closest('.popup');
+  close.addEventListener('click', () => closePopup(popup));
 });
 
 //--------------------------------------------------------------------------

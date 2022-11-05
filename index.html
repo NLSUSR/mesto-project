@@ -21,7 +21,7 @@
 
         <section class="profile">
             <img class="profile__avatar link-hover" id="profileAvatar" src="./images/avatars/vK6mrDAlUa8.jpg"
-                alt="Аватар профиля">
+                alt="Аватар профиля на котором изображено ваше фото или понравившаяся картинка"> <!--наиболее обобщеный альт подходящий под все картинки-->
             <div class="profile__info" id="profileInfo">
                 <div class="profile__title-button-wrapper">
                     <h1 class="profile__title" id="profileName">Илья Сергеев</h1>
@@ -60,40 +60,40 @@
 
     <section class="popup" id="editProfileSection">
         <div class="popup__container">
-            <button type="button" class="popup__container-close link-hover" id="closeEditProfileButton"></button>
+            <button type="button" class="popup__container-close link-hover"></button>
             <h2 class="popup__container-title">Редактировать профиль</h2>
-            <form action="#" class="popup__edit-profile-form" method="post">
+            <form action="#" class="popup__edit-profile-form" method="post" name="editProfileSectionForm">
                 <fieldset class="popup__edit-profile">
                     <input type="text" class="popup__edit-profile-input" id="editProfileNameInput"
-                        placeholder="Илья Сергеев" value="Илья Сергеев" required>
+                        placeholder="Илья Сергеев">
                     <input type="text" class="popup__edit-profile-input" id="editProfileActivityInput"
-                        placeholder="Web Developer+ 18 cohort" value="Web Developer+ 18 cohort">
+                        placeholder="Web Developer+ 18 cohort">
                     <input type="url" class="popup__edit-profile-input" id="editProfileAvatarInput"
-                        placeholder="Ссылка на картинку аватара" value="https://clck.ru/32aFq4">
+                        placeholder="Ссылка на картинку аватара">
                 </fieldset>
+                <input type="submit" class="popup__container-save" id="saveEditProfileButton" value="Сохранить">
             </form>
-            <button type="button" class="popup__container-save" id="saveEditProfileButton">Сохранить</button>
         </div>
     </section>
 
     <section class="popup" id="addCardSection">
         <div class="popup__container">
-            <button type="button" class="popup__container-close link-hover" id="closeAddCardButton"></button>
+            <button type="button" class="popup__container-close link-hover"></button>
             <h2 class="popup__container-title">Новое место</h2>
-            <form action="#" class="popup__edit-profile-form" method="post">
+            <form action="#" class="popup__edit-profile-form" method="post" name="addCardSectionForm">
                 <fieldset class="popup__edit-profile">
                     <input type="text" class="popup__edit-profile-input" id="addCardTitleInput" placeholder="Название">
                     <input type="url" class="popup__edit-profile-input" id="addCardImageLinkInput"
                         placeholder="Ссылка на картинку">
                 </fieldset>
+                <input type="submit" class="popup__container-save" id="saveAddCardButton" value="Создать">
             </form>
-            <button type="button" class="popup__container-save" id="saveAddCardButton">Cоздать</button>
         </div>
     </section>
 
     <section class="popup " id="openImageSection">
         <div class="popup__container">
-            <button type="button" class="popup__container-close link-hover" id="closeOpenedImage"></button>
+            <button type="button" class="popup__container-close link-hover"></button>
             <img class="popup__image" src="" alt="" id="openedImage">
             <h2 class="popup__place-name" id="placeName"></h2>
         </div>
