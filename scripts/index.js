@@ -1,121 +1,206 @@
-// (✿◠‿◠)
-// люблю писать коментарии в коде, ведь это значительно упрощает понимание кода!
-// смена аватара
-const profileAvatar = document.querySelector('#profileAvatar');
-const popupChangeAvatarSection = document.querySelector('#changeAvatarSection')
-const urlChangeAvatarInput = document.querySelector('#urlChangeAvatarInput');
-const saveChangeAvatarButton = document.querySelector('#saveChangeAvatarButton');
-const closeChangeAvatarButton = document.querySelector('#closeChangeAvatarButton');
-// функция открытия редактирования аватара 
-function openAvatarReplacement() {
-    popupChangeAvatarSection.classList.add('popup_opened');
-};
-profileAvatar.addEventListener('click', openAvatarReplacement);
-// функция вставки ссылки на картинку аватара
-function saveAvatar() {
-    profileAvatar.setAttribute('src', `${urlChangeAvatarInput.value}`);
-    return closeAvatarReplacement() // закрытие после сохранения
-}
-saveChangeAvatarButton.addEventListener('click', saveAvatar);
-// функция закрытия редактирования аватара
-function closeAvatarReplacement() {
-    popupChangeAvatarSection.classList.remove('popup_opened');
-};
-closeChangeAvatarButton.addEventListener('click', closeAvatarReplacement);
-// вообще я хотел добавить в редактирование профиля инпут , 
-// а по нажатию на аватар открывался бы аватар , 
-// но не стал отходить от макета поэтому as it is!
+// карточки из коробочки
+const initialCards = [
+    {
+        name: 'Архыз',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+    },
+    {
+        name: 'Челябинская область',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+    },
+    {
+        name: 'Иваново',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+    },
+    {
+        name: 'Камчатка',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+    },
+    {
+        name: 'Холмогорский район',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+    },
+    {
+        name: 'Байкал',
+        link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
+    }
+];
 
-// --------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+// переменные профиля
 
-// редактирование имени и сферы деятельности
 const editProfileButton = document.querySelector('#editProfileButton');
+const profileInfo = document.querySelector('#profileInfo');
+const AddCardButton = document.querySelector('#addCardButton');
+const profileName = document.querySelector('#profileName');
+const profileActivity = document.querySelector('#profileActivity');
+const profileAvatar = document.querySelector('#profileAvatar');
+
+//--------------------------------------------------------------------------
+// переменные редактирования
+
 const editProfileSection = document.querySelector('#editProfileSection');
-const profileNameInput = document.querySelector('#profileNameInput');
-const profileActivityInput = document.querySelector('#profileActivityInput');
-const saveEditProfileButton = document.querySelector('#saveEditProfileButton');
+const editProfileNameInput = document.querySelector('#editProfileNameInput');
+const editProfileActivityInput = document.querySelector('#editProfileActivityInput');
+const editProfileAvatarInput = document.querySelector('#editProfileAvatarInput');
 const closeEditProfileButton = document.querySelector('#closeEditProfileButton');
 
-// функция открытия редактирования профиля
-function openProfileReplacement() {
-    editProfileSection.classList.add('popup_opened');
-}
-editProfileButton.addEventListener('click', openProfileReplacement);
-// функция сохранения данных пользователя
-function saveProfileReplacement() {
-    profileName.innerText = `${editProfileNameInput.value}`;
-    profileActivity.innerText = `${editProfileActivityInput.value}`;
-    return closeProfileReplacement() // закрытие после сохранения
-}
-saveEditProfileButton.addEventListener('click', saveProfileReplacement);
-// функция закрытия редактирования профиля
-function closeProfileReplacement() {
-    editProfileSection.classList.remove('popup_opened');
-};
-closeEditProfileButton.addEventListener('click', closeProfileReplacement);
+//--------------------------------------------------------------------------
+// переменные добавления
 
-// --------------------------------------------------------------------------
-
-// добавление карточки
-const addCardButton = document.querySelector('#addCardButton');
 const addCardSection = document.querySelector('#addCardSection');
-const elementsList = document.querySelector('#elementsList')
 const addCardTitleInput = document.querySelector('#addCardTitleInput');
 const addCardImageLinkInput = document.querySelector('#addCardImageLinkInput');
-const saveAddCardButton = document.querySelector('#saveAddCardButton');
 const closeAddCardButton = document.querySelector('#closeAddCardButton');
-// функция открытия добавления карточки
-function openEditCard() {
-    addCardSection.classList.add('popup_opened');
-}
-addCardButton.addEventListener('click', openEditCard);
-// функция сохранения добавления карточки
-function saveEditCard() {
-    elementsList.insertAdjacentHTML('afterbegin', `
-    <li class="elements__item">
-        <div class="element">
-            <button type="button" class="element__delete"></button>
-            <img class="element__mask-group link-hover" src="${addCardImageLinkInput.value}" alt="фото карточки">
-            <div class="element__description">
-                <h2 class="element__place-name">${addCardTitleInput.value}</h2>
-                <button type="button" class="element__like"></button>
-            </div>
-        </div>
-    </li>
-`);
-    return closeEditCard(); // закрытие после сохранения
-}
-saveAddCardButton.addEventListener('click', saveEditCard);
-// функция закрытия добавления карточки
-function closeEditCard() {
-    addCardSection.classList.remove('popup_opened');
-}
-closeAddCardButton.addEventListener('click', closeEditCard);
 
-// --------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+// переменные просмотра
 
-// // удаление карточки
-// const elementDeleteButton = document.querySelector('element__delete');
+const openImageSection = document.querySelector('#openImageSection');
+const openedImage = document.querySelector('#openedImage');
+const placeName = document.querySelector('#placeName');
+const closeOpenedImage = document.querySelector('#closeOpenedImage');
 
-// // функция удаления карточки
-// function deleteCard() {
+//--------------------------------------------------------------------------
+// переменные создания карточек
 
-// }
-// elementDeleteButton.addEventListener('click', deleteCard);
+const elementsList = document.querySelector('#elementsList');
+const cardTemplate = document.querySelector('#cardTemplate').content;
 
-// --------------------------------------------------------------------------
+//--------------------------------------------------------------------------
+//функция открытия попапа
 
+function openPopup(popup) {
+    popup.classList.add('popup_opened');
+};
 
-const elementLikeButton = document.querySelectorAll('.element__like');
+//--------------------------------------------------------------------------
+// функция закрытия попапа
 
-elementLikeButton.forEach((item, i) => {
-    item.addEventListener('click', () => {
-        elementLikeButton[i].classList.toggle('element__like_active');
-    });
+function closePopup(popup) {
+    popup.classList.remove('popup_opened');
+};
+
+//--------------------------------------------------------------------------
+// функция открытия просмотра фотографии профиля
+
+profileAvatar.addEventListener('click', function () {
+    openedImage.setAttribute('src', profileAvatar.src);
+    openPopup(openImageSection);
 });
 
+//--------------------------------------------------------------------------
+// функция сохранения редактирования профиля
 
+function saveEditProfile(event) {
+    event.preventDefault();
+    profileName.textContent = editProfileNameInput.value;
+    profileActivity.textContent = editProfileActivityInput.value;
+    profileAvatar.setAttribute('src', editProfileAvatarInput.value);
+    closePopup(editProfileSection);
+};
+saveEditProfileButton.addEventListener('click', saveEditProfile);
 
+//--------------------------------------------------------------------------
+// функция сохранения добавления карточки
 
+function saveAddCard(event) {
+    event.preventDefault();
+    createCards(addCardTitleInput.value, addCardImageLinkInput.value);
+    closePopup(addCardSection);
+};
+saveAddCardButton.addEventListener('click', saveAddCard);
+
+//--------------------------------------------------------------------------
+// функция создания карточки
+
+function createCard(text, link) {
+    const card = cardTemplate.cloneNode(true);
+    const image = card.querySelector('.element__mask-group');
+    const title = card.querySelector('.element__place-name');
+    const like = card.querySelector('.element__like');
+    const forget = card.querySelector('.element__delete');
+
+    title.textContent = text;
+    image.setAttribute('src', link);
+    image.setAttribute('alt', text);
+
+    image.addEventListener('click', function () {
+        placeName.textContent = text;
+        openedImage.setAttribute('src', link);
+        openedImage.setAttribute('alt', text);
+        openPopup(openImageSection);
+    })
+
+    like.addEventListener('click', function (event) {
+        event.target.classList.toggle('element__like_active');
+    });
+
+    forget.addEventListener('click', function (event) {
+        const card = event.target.closest('.elements__item');
+        card.remove();
+    });
+
+    return card
+};
+
+//--------------------------------------------------------------------------
+// функция добавления карточки
+
+function addCard(card) {
+    elementsList.prepend(card);
+};
+
+//--------------------------------------------------------------------------
+// функция создания карточек
+
+function createCards(text, link) {
+    const newCard = createCard(text, link);
+    addCard(newCard);
+};
+
+//--------------------------------------------------------------------------
+// перебор массива с карточками из коробочки
+
+initialCards.forEach(function (initialCard) {
+    createCards(initialCard.name, initialCard.link);
+});
+
+//--------------------------------------------------------------------------
+// слушатель кнопки редактирования профиля
+
+editProfileButton.addEventListener('click', function () {
+    openPopup(editProfileSection);
+});
+
+//--------------------------------------------------------------------------
+// слушатель кнопки закрытия редактирования профиля
+
+closeEditProfileButton.addEventListener('click', function () {
+    closePopup(editProfileSection);
+});
+
+//--------------------------------------------------------------------------
+// слушатель кнопки добавления карточки
+
+AddCardButton.addEventListener('click', function () {
+    openPopup(addCardSection);
+});
+
+//--------------------------------------------------------------------------
+// слушатель кнопки закрытия добавления карточки
+
+closeAddCardButton.addEventListener('click', function () {
+    closePopup(addCardSection);
+});
+
+//--------------------------------------------------------------------------
+// слушатель кнопки закрытия просматриваемой картинки
+
+closeOpenedImage.addEventListener('click', function () {
+    closePopup(openImageSection);
+});
+
+//--------------------------------------------------------------------------
 
 // (╯°益°)╯彡┻━┻
