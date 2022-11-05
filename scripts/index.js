@@ -98,6 +98,8 @@ function closePopup(popup) {
 
 profileAvatar.addEventListener('click', function () {
     openedImage.setAttribute('src', profileAvatar.src);
+    openedImage.setAttribute('alt', profileAvatar.alt);
+    placeName.textContent = profileAvatar.alt;
     openPopup(openImageSection);
 });
 

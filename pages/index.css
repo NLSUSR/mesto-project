@@ -26,6 +26,8 @@
 @import url(../blocks/element/__place-name/element__place-name.css);
 @import url(../blocks/element/__like/element__like.css);
 @import url(../blocks/element/__like/_active/element__like_active.css);
+@import url(../blocks/element/__place-name/element__place-name.css);
+@import url(../blocks/element/__delete/element__delete.css);
 /* ФУТЕР */
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
@@ -40,3 +42,5 @@
 @import url(../blocks/popup/__edit-profile/popup__edit-profile.css);
 @import url(../blocks/popup/__edit-profile-input/popup__edit-profile-input.css);
 @import url(../blocks/popup/__container-save/popup__container-save.css);
+@import url(../blocks/popup/__image/popup__image.css);
+@import url(../blocks/popup/__place-name/popup__place-name.css);
