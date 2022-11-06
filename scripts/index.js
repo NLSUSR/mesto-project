@@ -111,8 +111,10 @@ function saveEditProfile(event) {
     profileName.textContent = editProfileNameInput.value;
     profileActivity.textContent = editProfileActivityInput.value;
     profileAvatar.setAttribute('src', editProfileAvatarInput.value);
+    editProfileNameInput.setAttribute('value',editProfileNameInput.value); // я не понимаю что от меня требуют для того чтобы задать валю, нужно написать 1 раз
+    editProfileActivityInput.setAttribute('value',editProfileActivityInput.value); // (до этого момента валю замещает плейсхолдер)поэтому ставлю значения которые будут
+    editProfileAvatarInput.setAttribute('value',editProfileAvatarInput.value); //  после первой итерации добавления данных пользователем
     closePopup(editProfileSection);
-    event.target.reset()
 };
 editProfileSectionForm.addEventListener('submit', saveEditProfile);
 
